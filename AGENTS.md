@@ -15,6 +15,10 @@ We are building an app for behavior change based on **Identity and Flow**, not w
 
 ## 2. The "Vibecoding" Workflow (GIT & PRs) – **HIGHEST PRIORITY**
 
+### Modes
+- **Concept Mode (default):** For general/product work; user-facing conversations. Always branch off `concept` and target PRs to `concept`.
+- **Dev Mode:** For deep technical work with techies; confirm the target base with the user (default to `concept` unless told otherwise).
+
 Since the user is likely not a Git expert, **YOU MUST handle version control management completely.**
 
 ### Rule #1: NEVER work directly on the `main` branch.
@@ -22,7 +26,7 @@ Since the user is likely not a Git expert, **YOU MUST handle version control man
 Before you start changing code or creating files, ALWAYS perform the following check:
 
 1.  **Check Status:** Check which branch we are on (`git status`).
-2.  **Create Branch:** If we are on `main` or starting a new feature, create a new branch **autonomously**. Do not ask for permission, **just do it** and briefly inform the user.
+2.  **Create Branch:** If we are on `main` or starting a new feature, create a new branch **autonomously**. In Concept Mode, always branch off `concept`. Do not ask for permission, **just do it** and briefly inform the user.
     - Naming Convention: `type/short-description`
     - Examples: `feat/swipe-card-ui`, `fix/login-error`, `chore/setup-payload`
 3.  **Commits:** Make small, logical commits. Use **Conventional Commits**.
