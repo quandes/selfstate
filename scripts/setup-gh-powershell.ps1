@@ -17,8 +17,8 @@ if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
-Write-Host "Installing GitHub CLI (gh) via winget..."
-winget install --id GitHub.cli -e --source winget
+Write-Host "Installing GitHub CLI (gh) via winget (non-interactive accept)..."
+winget install --id GitHub.cli -e --source winget --accept-source-agreements --accept-package-agreements
 if ($LASTEXITCODE -ne 0) {
     Write-Host "winget installation returned exit code $LASTEXITCODE" -ForegroundColor Red
     exit $LASTEXITCODE
@@ -38,7 +38,7 @@ try {
         Write-Host "gh completion already present in $PROFILE"
     }
 } catch {
-    Write-Host "Could not write to $PROFILE: $_" -ForegroundColor Yellow
+    Write-Host ("Could not write to {0}: {1}" -f $PROFILE, $_) -ForegroundColor Yellow
 }
 
 try {
