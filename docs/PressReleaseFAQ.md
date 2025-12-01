@@ -26,3 +26,6 @@ A: Ja. Teams können gemeinsame Patterns nutzen und Flow Chains sichtbar machen,
 
 **Q: Was ist, wenn mich der Impact Coach überfordert?**  
 A: Sag im State Sync, dass es zu viel ist. Der Coach schlägt immer eine einfachere, kürzere Version vor – Step-down statt Step-up.
+ 
+**Q: Was genau ist unter der "Willenskraft‑Falle" zu verstehen?**  
+A: Die Willenskraft‑Falle ist die Annahme, dass Veränderung nur durch mehr Disziplin gelingt. Willenskraft ist begrenzt und kontextabhängig; SelfState setzt deshalb auf Micro‑Scripts, Umgebungsgestaltung und Identitätsfokus statt auf Druck.
