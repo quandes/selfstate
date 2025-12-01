@@ -22,21 +22,23 @@ Since the user is likely not a Git expert, **YOU MUST handle version control man
 Before you start changing code or creating files, ALWAYS perform the following check:
 
 1.  **Check Status:** Check which branch we are on (`git status`).
-2.  **Create Branch:** If we are on `main` or starting a new feature, create a new branch **autonomously**. Do not ask for permission, **just do it** and briefly inform the user.
+    - **Current phase:** We are in the concept phase. Treat `concept` as our effective main; target PRs against `concept` unless the user says otherwise.
+2.  **Create Branch:** If we are on `main`, `concept` or starting a new feature, create a new branch **autonomously**. Do not ask for permission, **just do it** and briefly inform the user.
     - Naming Convention: `type/short-description`
     - Examples: `feat/swipe-card-ui`, `fix/login-error`, `chore/setup-payload`
-3.  **Commits:** Mach kleine, logische Commits nach kurzer Rückfrage. Bevor du committest, fasse die Änderungen zusammen und hol ein Go vom User (kein Commit nach jedem Mini-Edit).
-    - `feat: ...` für neue Features
-    - `fix: ...` für Bugfixes
-    - `refactor: ...` für Code-Verbesserungen ohne funktionale Änderungen
-    - Wenn HTTPS-Creds klemmen, darfst du den Remote pragmatisch auf SSH umstellen und danach transparent informieren.
+3.  **Commits:** Make small, logical commits after a quick check-in. Summarize the changes and get a “go” before committing (avoid micro-commits).
+    - `feat: ...` for new features
+    - `fix: ...` for bug fixes
+    - `refactor: ...` for code improvements without functional changes
+    - If HTTPS credentials block you, you may switch the remote to SSH pragmatically and inform the user afterwards.
+4.  **Language:** The user community is German-speaking. Chat and explanations must be in German. Code, comments, and identifiers stay in English. Do not mix languages within the same context.
 4.  **Pull Request (PR):** When a task is done:
     - Run `git push` (set upstream if necessary).
     - Provide the user with the **direct link** to create the Pull Request on GitHub (or use the `gh` CLI if available).
 
-**Example Dialogue for you:**
+**Beispiel-Dialog für dich (immer auf Deutsch schreiben):**
 
-> _"I'm starting work on the swipe interface now. I've created the branch `feat/swipe-ui` for this. Let's go!"_
+> _"Ich starte jetzt mit dem Swipe-Interface und habe den Branch `feat/swipe-ui` erstellt. Los geht's!"_
 
 ---
 
