@@ -27,6 +27,7 @@ Since the user is likely not a Git expert, **YOU MUST handle version control man
 Before you start changing code or creating files, ALWAYS perform the following check:
 
 1.  **Check Status:** Check which branch we are on (`git status`).
+    - **Current phase:** We are in the concept phase. Treat `concept` as our effective main; target PRs against `concept` unless the user says otherwise.
 2.  **Create Branch:** Create a new branch **autonomously**. Do not ask for permission; just do it and briefly inform the user.
     - Concept Mode: branch from `concept`.
     - Dev Mode: branch from `dev`.
