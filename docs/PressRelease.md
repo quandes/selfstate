@@ -44,9 +44,91 @@ Abends: Der State Sync erkennt Müdigkeit und schlägt ein SELF-Skript vor: “2
 - **Teilnehmerin, Social Impact Camp:** “Zum ersten Mal fühlt sich Selbstführung wie ein gutes Teamgefühl mit mir selbst an – nicht wie ein innerer Drill Sergeant.”  
 - **Impact Coach (KI-Persona):** “Ich messe nicht, ob du hart genug bist. Ich sorge dafür, dass es leicht genug wird.”
 
+## Häufig gestellte Fragen (FAQ)
+
+### Ist SelfState nicht einfach ein weiterer Habit-Tracker?
+**Nein.** SelfState unterscheidet sich fundamental von klassischen Habit-Trackern:
+- Wir messen **Flow**, nicht Streaks
+- Wir arbeiten **identitätszentriert**, nicht zielorientiert
+- Unsere Micro-Scripts dauern unter 2 Minuten und sind so gestaltet, dass sie keinen Widerstand erzeugen
+- Der Impact Coach vereinfacht bei Reibung, statt mehr Druck aufzubauen
+
+### Wie schützt SelfState meine sensiblen Daten?
+**Privacy-First ist unser Grundprinzip:**
+- **BYOK (Bring Your Own Key)**: Dein KI-Schlüssel bleibt bei dir und wird nur für einzelne Calls genutzt, nie gespeichert
+- **Open Source**: Der gesamte Code ist auf GitHub einsehbar und überprüfbar
+- **Lokale Kontrolle**: Du entscheidest, welche Daten du teilst
+- **Keine Datenkrake**: Wir verkaufen keine Nutzerdaten
+
+### Was unterscheidet den Impact Coach von anderen KI-Chatbots?
+Der Impact Coach denkt wie ein **empathischer Mentor**, nicht wie ein Taskmaster:
+- **Erstes Prinzip**: Vereinfachen, Flow ermöglichen, nie "mehr Druck"
+- **Kontextbewusst**: Erkennt Impact-Stress und schlägt proaktiv Step-downs vor
+- **Identitätsorientiert**: Spricht in der Sprache von Rollen und Identitäten, nicht von To-dos
+- **Lernend**: Passt sich deinem Rhythmus und deinen Mustern an
+
+### Für wen ist SelfState gedacht?
+SelfState richtet sich primär an:
+- **Changemaker** im Social Impact Bereich, die Wirkung ohne Burnout erzielen wollen
+- **Gründer:innen**, die ihre Identität als Leader, Builder oder Connector ausprägen möchten
+- **Teams**, die eine gemeinsame Flow Chain aufbauen wollen
+- **Alle**, die von Willenskraft zu identitätsbasiertem Handeln wechseln möchten
+
+### Kann ich meine vorhandenen Routinen importieren?
+**Ja**, aber mit einem wichtigen Unterschied: Der Impact Coach hilft dir, bestehende Routinen in **Micro-Scripts** zu zerlegen – so weit herunterzubrechen, bis sie friktionsfrei sind. Eine "Morgenroutine" wird zu mehreren atomaren 2-Minuten-Skripten, die sich mühelos anfühlen.
+
+### Wie funktioniert die Pattern Library?
+Die Pattern Library ist ein **Community-getriebener Ideen-Pool**:
+- Erfolgreiche Micro-Scripts werden von Nutzern geteilt
+- Du kannst Patterns klonen und an deinen Kontext anpassen ("Clone & Adapt")
+- Attribution bleibt erhalten
+- Beispiele: "Funding-Outreach Routine", "Burnout-Prävention", "Deep Work Setup"
+
+### Was passiert, wenn ich einen Tag aussetze?
+Die **Flow Chain ist fehlertolerant**:
+- Kein Streak-Druck oder Schuldgefühle
+- Der State Sync schlägt einen sanften Re-Entry vor
+- Fokus liegt auf langfristiger Kontinuität, nicht auf perfekter Konsistenz
+- Der Impact Coach fragt: "Was können wir vereinfachen, damit es morgen leichter wird?"
+
+### Wie starte ich mit SelfState?
+Der Einstieg ist bewusst niedrigschwellig:
+1. **Wähle eine Identität** (SELF, CREATE oder CONNECT)
+2. **Erstelle 2 Micro-Scripts** unter 2 Minuten
+3. **Mach den ersten State Sync** am nächsten Tag
+4. **Iteriere**: Der Impact Coach hilft dir, die Skripte zu verfeinern
+
+### Funktioniert SelfState auch für Teams?
+**Ja, absolut.** Teams können:
+- Gemeinsame Patterns nutzen und teilen
+- Flow Chains sichtbar machen (ohne Leistungsdruck)
+- Soziale Rechenschaft (Accountability) aufbauen
+- Eine gemeinsame Identität als Team entwickeln
+
+### Was ist der Unterschied zwischen Concept Mode und Dev Mode?
+SelfState wird mit der **Vibecoding-Methodik** entwickelt:
+- **Concept Mode**: Produkt- und nutzerzentrierte Entwicklung (Standard)
+- **Dev Mode**: Tiefe technische Arbeit für Entwickler
+- Beide Modi nutzen Git-Branches und Pull Requests für saubere Versionskontrolle
+
+### Wann ist die Public Beta verfügbar?
+**Jetzt!** SelfState öffnet die Public Beta für die Social-Impact-Community. Wir suchen Early Adopters, die:
+- Die Plattform testen und Feedback geben
+- Eigene Patterns zur Library beitragen
+- Teil der Vibecoding-Community werden möchten
+
+### Wie kann ich zum Projekt beitragen?
+Als **Open-Source-Projekt** freuen wir uns über Beiträge:
+- **Code**: Pull Requests auf GitHub
+- **Patterns**: Teile deine erfolgreichen Micro-Scripts
+- **Feedback**: Nutze die App und berichte von deinen Erfahrungen
+- **Community**: Nimm am Social Impact Camp teil
+
+---
+
 ## Call to Action
 SelfState öffnet die Public Beta für die Social-Impact-Community. Join the Flow Chain: Testen, Patterns teilen, Impact verstärken.  
-Kontakt: hello@quandes.org  
-GitHub: https://github.com/Quandes-Projects/selfstate
-  
-**FAQ:** Siehe `docs/PressReleaseFAQ.md`.
+
+**Kontakt:** hello@quandes.org  
+**GitHub:** https://github.com/Quandes-Projects/selfstate  
+**Weitere FAQs:** Siehe `docs/PressReleaseFAQ.md`
