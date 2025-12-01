@@ -20,6 +20,7 @@ Since the user is likely not a Git expert, **YOU MUST handle version control man
 ### Modes
 - **Concept Mode (default):** General/product-facing work. Always branch off `concept` and target PRs to `concept`.
 - **Dev Mode:** Deep technical work for techies. Branch off `dev` and target PRs to `dev` (keeps user-facing and hardcore dev streams separated).
+- **Branch protection:** `concept` and `dev` are protected; always go via PR, no force pushes.
 
 ### Rule #1: NEVER work directly on the `main` branch.
 
