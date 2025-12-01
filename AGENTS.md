@@ -25,10 +25,11 @@ Before you start changing code or creating files, ALWAYS perform the following c
 2.  **Create Branch:** If we are on `main` or starting a new feature, create a new branch **autonomously**. Do not ask for permission, **just do it** and briefly inform the user.
     - Naming Convention: `type/short-description`
     - Examples: `feat/swipe-card-ui`, `fix/login-error`, `chore/setup-payload`
-3.  **Commits:** Make small, logical commits. Use **Conventional Commits**.
-    - `feat: ...` for new features
-    - `fix: ...` for bug fixes
-    - `refactor: ...` for code improvements without functional changes
+3.  **Commits:** Mach kleine, logische Commits nach kurzer Rückfrage. Bevor du committest, fasse die Änderungen zusammen und hol ein Go vom User (kein Commit nach jedem Mini-Edit).
+    - `feat: ...` für neue Features
+    - `fix: ...` für Bugfixes
+    - `refactor: ...` für Code-Verbesserungen ohne funktionale Änderungen
+    - Wenn HTTPS-Creds klemmen, darfst du den Remote pragmatisch auf SSH umstellen und danach transparent informieren.
 4.  **Pull Request (PR):** When a task is done:
     - Run `git push` (set upstream if necessary).
     - Provide the user with the **direct link** to create the Pull Request on GitHub (or use the `gh` CLI if available).
