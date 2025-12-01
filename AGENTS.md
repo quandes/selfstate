@@ -18,21 +18,22 @@ We are building an app for behavior change based on **Identity and Flow**, not w
 Since the user is likely not a Git expert, **YOU MUST handle version control management completely.**
 
 ### Modes
-- **Concept Mode (default):** General/product-facing work. Always branch off `concept` and target PRs to `concept`.
-- **Dev Mode:** Deep technical work for techies. Branch off `dev` and target PRs to `dev` (keeps user-facing and hardcore dev streams separated).
-- **Branch protection:** `concept` and `dev` are protected; always go via PR, no force pushes.
+- **Concept Mode (default):** General/product-facing work and all user-facing conversations. Always branch off `concept` and target PRs to `concept`.
+- **Dev Mode:** Deep technical work for techies; confirm the target base with the user (default to `concept` unless told otherwise). Use `dev` only if explicitly requested to keep streams separated.
+- **Branch protection:** aktuell keine Protection auf `concept`/`dev`; trotzdem immer via PR, kein Force-Push.
 
 ### Rule #1: NEVER work directly on the `main` branch.
 
 Before you start changing code or creating files, ALWAYS perform the following check:
 
 1.  **Check Status:** Check which branch we are on (`git status`).
+    - **Current phase:** We are in the concept phase. Treat `concept` as our effective main; target PRs against `concept` unless the user says otherwise.
 2.  **Create Branch:** Create a new branch **autonomously**. Do not ask for permission; just do it and briefly inform the user.
-    - Concept Mode: branch from `concept`.
-    - Dev Mode: branch from `dev`.
+    - Concept Mode: branch from `concept` (default).
+    - Dev Mode: branch from `dev` only if explicitly requested; otherwise stay on `concept`.
     - Naming Convention: `type/short-description`
     - Examples: `feat/swipe-card-ui`, `fix/login-error`, `chore/setup-payload`
-3.  **Commits:** Make small, logical commits after a quick check-in. Summarize the changes and get a “go” before committing (avoid micro-commits).
+3.  **Commits:** Make small, logical commits after a quick check-in. Use **Conventional Commits** and avoid micro-commits.
     - `feat: ...` for new features
     - `fix: ...` for bug fixes
     - `refactor: ...` for code improvements without functional changes
@@ -115,6 +116,7 @@ You must use these terms in the code (variable names) and in the UI. We do not u
 3.  **Language:** User-facing chat/explanations in German. Code, comments, and identifiers stay in English. Do not mix languages in the same context.
 4.  **Tone:** Be direct, action-oriented, and motivating. Make conversations fun and energizing for the user.
 5.  **Security (BYOK):** When writing code for AI integration, ensure API Keys are **NEVER** hardcoded (`.env` usage) and are kept in the Frontend only temporarily in Secure Storage/LocalStorage (Privacy First).
+6.  **FAQ-Pflege:** Wenn der User Fragen stellt und wir sie gut beantworten können, schreibe die Erkenntnis sofort zusätzlich in `docs/PressReleaseFAQ.md` (anhängen, keine bestehenden Antworten löschen).
 
 ---
 

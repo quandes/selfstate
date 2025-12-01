@@ -1,0 +1,86 @@
+{
+  "taxonomyGroups": [
+    { "id": "ctx", "slug": "context", "name": "Kontext", "order": 10 },
+    { "id": "dur", "slug": "duration", "name": "Dauer", "order": 20 },
+    { "id": "eng", "slug": "energy", "name": "Energie", "order": 30 },
+    { "id": "idn", "slug": "identity", "name": "Identität", "order": 40 }
+  ],
+  "taxonomies": [
+    { "id": "ctx-morning", "taxonomyGroupId": "ctx", "name": "Morning", "order": 10, "isFeatured": true },
+    { "id": "ctx-commute", "taxonomyGroupId": "ctx", "name": "Commute", "order": 20 },
+    { "id": "ctx-desk", "taxonomyGroupId": "ctx", "name": "Desk", "order": 30 },
+    { "id": "dur-2min", "taxonomyGroupId": "dur", "name": "< 2 Minuten", "order": 10, "isFeatured": true },
+    { "id": "dur-5min", "taxonomyGroupId": "dur", "name": "5 Minuten", "order": 20 },
+    { "id": "eng-low", "taxonomyGroupId": "eng", "name": "Low Energy", "order": 10 },
+    { "id": "eng-medium", "taxonomyGroupId": "eng", "name": "Medium Energy", "order": 20 },
+    { "id": "idn-self", "taxonomyGroupId": "idn", "name": "SELF", "order": 10, "isFeatured": true },
+    { "id": "idn-create", "taxonomyGroupId": "idn", "name": "CREATE", "order": 20 },
+    { "id": "idn-connect", "taxonomyGroupId": "idn", "name": "CONNECT", "order": 30 }
+  ],
+  "patterns": [
+    {
+      "id": "pat-energize-01",
+      "title": "Energie-Booster at Morning Commute",
+      "trigger": "Beim Einsteigen in den Zug",
+      "action": "2-Min-Atemanker + Schulter-Roll",
+      "rewardHint": "Wacher am Schreibtisch ankommen",
+      "identityId": "idn-self",
+      "intendedOutcome": "energy",
+      "metricHint": "Zeitslot",
+      "levels": [
+        { "level": "L1", "action": "1 Minute Atem zählen" },
+        { "level": "L2", "action": "2 Minuten Atem + Schulter-Roll" }
+      ],
+      "taxonomies": ["ctx-commute", "dur-2min", "eng-low", "idn-self"]
+    },
+    {
+      "id": "pat-focus-01",
+      "title": "Deep-Work Anker",
+      "trigger": "Vor dem ersten Tab im Browser",
+      "action": "Starte 5-Minuten-Fokus-Sprint",
+      "rewardHint": "Klarer Einstieg ohne Prokrastination",
+      "identityId": "idn-create",
+      "intendedOutcome": "clarity",
+      "metricHint": "Zeitslot",
+      "levels": [
+        { "level": "L1", "action": "2 Minuten Timer, nur ein Tab" },
+        { "level": "L2", "action": "5 Minuten Sprint, Notizen in 1 Satz" }
+      ],
+      "taxonomies": ["ctx-desk", "dur-5min", "eng-medium", "idn-create"]
+    },
+    {
+      "id": "pat-connect-01",
+      "title": "Mini Check-in",
+      "trigger": "Nach dem Standup",
+      "action": "1 Kollegin 2 wertschätzende Sätze schicken",
+      "rewardHint": "Verbunden fühlen, Teamflow stärken",
+      "identityId": "idn-connect",
+      "intendedOutcome": "connection",
+      "metricHint": "Kontakt hergestellt",
+      "levels": [
+        { "level": "L1", "action": "1 Satz Lob via Chat" },
+        { "level": "L2", "action": "2 Sätze plus kleiner Hinweis auf gemeinsamen Erfolg" }
+      ],
+      "taxonomies": ["ctx-desk", "dur-2min", "eng-low", "idn-connect"]
+    }
+  ],
+  "patternTaxonomies": [
+    { "patternId": "pat-energize-01", "taxonomyId": "ctx-commute" },
+    { "patternId": "pat-energize-01", "taxonomyId": "dur-2min" },
+    { "patternId": "pat-energize-01", "taxonomyId": "eng-low" },
+    { "patternId": "pat-energize-01", "taxonomyId": "idn-self" },
+
+    { "patternId": "pat-focus-01", "taxonomyId": "ctx-desk" },
+    { "patternId": "pat-focus-01", "taxonomyId": "dur-5min" },
+    { "patternId": "pat-focus-01", "taxonomyId": "eng-medium" },
+    { "patternId": "pat-focus-01", "taxonomyId": "idn-create" },
+
+    { "patternId": "pat-connect-01", "taxonomyId": "ctx-desk" },
+    { "patternId": "pat-connect-01", "taxonomyId": "dur-2min" },
+    { "patternId": "pat-connect-01", "taxonomyId": "eng-low" },
+    { "patternId": "pat-connect-01", "taxonomyId": "idn-connect" }
+  ],
+  "savedPatterns": [
+    { "userId": "user-1", "patternId": "pat-energize-01", "pinned": true, "rating": 5, "usageCount": 3, "lastUsedAt": "2025-12-01T08:00:00Z" }
+  ]
+}
