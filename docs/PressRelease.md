@@ -19,7 +19,7 @@ Berlin, 30. September 2025 – Quandes Projects e. V. kündigt mit SelfState die
 - Ohne soziale Spiegelung entsteht das Hero-Syndrom: Isolation statt Community-getriebene Weiterentwicklung.
 
 ## Die Lösung
-SelfState übersetzt Identitäten in **Micro-Scripts**, prüft sie täglich im **State Sync** und hält den Flow-Kompass hoch. Der **Impact Coach** reagiert empathisch: Wenn Reibung auftaucht, schlägt er IMMER eine Vereinfachung (Step-down) vor – nie mehr Druck. Alles läuft BYOK (Bring Your Own Key) und Privacy-first.
+SelfState übersetzt Identitäten in **Micro-Scripts**, prüft sie täglich im **State Sync** und hält den Flow-Kompass hoch. Der **Impact Coach** reagiert empathisch: Wenn Reibung auftaucht, schlägt er IMMER eine Vereinfachung (Step-down) vor – nie mehr Druck.
 
 ## Für wen?
 - Changemaker im Social Impact Camp, die Impact ohne Burnout wollen.  
@@ -30,7 +30,7 @@ SelfState übersetzt Identitäten in **Micro-Scripts**, prüft sie täglich im *
 1. **Identity-First Planning:** Drei Säulen (SELF, CREATE, CONNECT) verankern Verhalten in Rollen statt in To-do-Listen.  
 2. **Micro-Scripts statt Habits:** Atomare 2-Minuten-Skripte senken Reibung, bauen Momentum und verhindern Ego Depletion.  
 3. **Daily State Sync:** Kurzer Check-in, der Flow misst, Friktion sichtbar macht und sofort eine Anpassung vorschlägt.  
-4. **Impact Coach (KI):** Vercel AI SDK, BYOK, empathischer Ton. Erkennt Impact-Stress und bietet Step-downs an.  
+4. **Impact Coach (KI):** Vercel AI SDK, empathischer Ton. Erkennt Impact-Stress und bietet Step-downs an.  
 5. **Pattern Library:** Community-sourced Patterns, die sich per “Clone & Adapt” in eigene Micro-Scripts verwandeln.  
 6. **Flow Chain Tracker:** Visualisiert Kontinuität, nicht Streak-Pressure. Fortschritt fühlt sich leicht an.
 
@@ -43,12 +43,6 @@ Abends: Der State Sync erkennt Müdigkeit und schlägt ein SELF-Skript vor: “2
 - **Quandes Projects e. V. (Board):** “SelfState ist unser Anti-Burnout-Protokoll für Changemaker. Identität zuerst, Flow als Metrik.”  
 - **Teilnehmerin, Social Impact Camp:** “Zum ersten Mal fühlt sich Selbstführung wie ein gutes Teamgefühl mit mir selbst an – nicht wie ein innerer Drill Sergeant.”  
 - **Impact Coach (KI-Persona):** “Ich messe nicht, ob du hart genug bist. Ich sorge dafür, dass es leicht genug wird.”
-
-## Datenschutz & Ethik
-- **BYOK:** API-Keys bleiben bei den Nutzern. Keine Speicherung im Backend.  
-- **Open Source:** Voll transparent, überprüfbar, forkbar.  
-- **Empathische Defaults:** Fehlermeldungen sind menschlich, der Coach vermeidet Druckaufbau.  
-- **Community Governance:** Patterns werden kuratiert und können ge-flaggt werden, um Qualität zu sichern.
 
 ## Call to Action
 SelfState öffnet die Public Beta für die Social-Impact-Community. Join the Flow Chain: Testen, Patterns teilen, Impact verstärken.  
