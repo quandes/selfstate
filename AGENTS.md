@@ -17,25 +17,32 @@ We are building an app for behavior change based on **Identity and Flow**, not w
 
 Since the user is likely not a Git expert, **YOU MUST handle version control management completely.**
 
+### Modes
+- **Concept Mode (default):** General/product-facing work. Always branch off `concept` and target PRs to `concept`.
+- **Dev Mode:** Deep technical work for techies. Branch off `dev` and target PRs to `dev` (keeps user-facing and hardcore dev streams separated).
+
 ### Rule #1: NEVER work directly on the `main` branch.
 
 Before you start changing code or creating files, ALWAYS perform the following check:
 
 1.  **Check Status:** Check which branch we are on (`git status`).
-2.  **Create Branch:** If we are on `main` or starting a new feature, create a new branch **autonomously**. Do not ask for permission, **just do it** and briefly inform the user.
+2.  **Create Branch:** Create a new branch **autonomously**. Do not ask for permission; just do it and briefly inform the user.
+    - Concept Mode: branch from `concept`.
+    - Dev Mode: branch from `dev`.
     - Naming Convention: `type/short-description`
     - Examples: `feat/swipe-card-ui`, `fix/login-error`, `chore/setup-payload`
-3.  **Commits:** Make small, logical commits. Use **Conventional Commits**.
+3.  **Commits:** Make small, logical commits after a quick check-in. Summarize the changes and get a “go” before committing (avoid micro-commits).
     - `feat: ...` for new features
     - `fix: ...` for bug fixes
     - `refactor: ...` for code improvements without functional changes
+    - If HTTPS credentials block you, you may switch the remote to SSH pragmatically and inform the user afterwards.
 4.  **Pull Request (PR):** When a task is done:
     - Run `git push` (set upstream if necessary).
     - Provide the user with the **direct link** to create the Pull Request on GitHub (or use the `gh` CLI if available).
 
-**Example Dialogue for you:**
+**Beispiel-Dialog für dich (immer auf Deutsch schreiben):**
 
-> _"I'm starting work on the swipe interface now. I've created the branch `feat/swipe-ui` for this. Let's go!"_
+> _"Ich starte jetzt mit dem Swipe-Interface und habe den Branch `feat/swipe-ui` erstellt. Los geht's!"_
 
 ---
 
@@ -104,7 +111,9 @@ You must use these terms in the code (variable names) and in the UI. We do not u
 1.  **Proactivity:** Do not wait for the user to dictate every Git command. Execute them yourself.
 2.  **Explanation:** Explain briefly and in layman's terms what you are doing.
     - _“I am installing the database drivers and setting up the connection now.”_
-3.  **Security (BYOK):** When writing code for AI integration, ensure API Keys are **NEVER** hardcoded (`.env` usage) and are kept in the Frontend only temporarily in Secure Storage/LocalStorage (Privacy First).
+3.  **Language:** User-facing chat/explanations in German. Code, comments, and identifiers stay in English. Do not mix languages in the same context.
+4.  **Tone:** Be direct, action-oriented, and motivating. Make conversations fun and energizing for the user.
+5.  **Security (BYOK):** When writing code for AI integration, ensure API Keys are **NEVER** hardcoded (`.env` usage) and are kept in the Frontend only temporarily in Secure Storage/LocalStorage (Privacy First).
 
 ---
 
