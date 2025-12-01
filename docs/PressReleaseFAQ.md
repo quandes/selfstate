@@ -18,9 +18,6 @@ A: Es ist ein Ideen-Pool aus dem Social Impact Camp. Du kopierst ein Pattern, pa
 **Q: Was, wenn ich einen Tag aussetze?**  
 A: Die Flow Chain ist fehlertolerant. Der State Sync schlägt einen sanften Re-Entry vor, statt Druck aufzubauen.
 
-**Q: Was kostet SelfState?**  
-A: Die Public Beta ist kostenfrei. Das Projekt ist Open Source und bleibt für die Community zugänglich.
-
 **Q: Wie starte ich?**  
 A: Wähle eine Identität (SELF, CREATE oder CONNECT), erstelle zwei Micro-Scripts unter 2 Minuten und mach den ersten State Sync am nächsten Tag.
 
