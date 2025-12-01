@@ -33,37 +33,43 @@ Dieser Stack ist besonders gut geeignet, um von KI-Agenten (Cursor, Windsurf, Cl
 
 Hier sind die exakten Collection-Namen für Payload, angepasst an die "Quandes-Terminologie".
 
-### A. Core Collections
+### A. Core Collections (aktualisiert)
 
-1.  **`users`**:
-    - Standard Auth.
-    - Felder: `name`, `roles` (admin, user), `impactProfile` (Relation zu "Identity").
-2.  **`identities`** (Die 3 Säulen):
-    - Global definiert: `SELF`, `CREATE`, `CONNECT`.
-3.  **`micro_scripts`** (ehemals Habits):
-    - `title`: Text (z.B. "Tiefenarbeit Starten").
-    - `trigger`: Text (z.B. "Nach dem ersten Kaffee").
-    - `action`: Text (Die eigentliche Handlung, < 2 Min).
-    - `identity`: Relation zu `identities`.
-    - `owner`: Relation zu `users`.
-    - `isActive`: Boolean.
-    - `currentLevel`: Select (L1 - L5).
-    - `sourcePattern`: Relation zu `pattern_library` (optional, falls geklont).
-4.  **`state_syncs`** (ehemals Logs):
-    - `script`: Relation zu `micro_scripts`.
-    - `date`: Timestamp.
-    - `status`: Select (`flow`, `friction`, `skipped`).
-    - `flowRating`: Number (1-5).
-    - `frictionNote`: Text (Warum hat es gehakt?).
-    - `aiAdjustment`: Text (Vorschlag des Agenten, optional).
+1.  **`users`**  
+    - Felder: `name`, `roles` (admin, user), `impactProfile` (Relation zu `identities`), `teamId` (optional).
+2.  **`identities`**  
+    - Global: `SELF`, `CREATE`, `CONNECT`.
+    - Felder: `name`, `description`, `slug`, `icon`.
+3.  **`micro_scripts`**  
+    - Felder: `title`, `trigger`, `action`, `rewardHint`, `identity`, `owner`, `level` (L1–L5), `isActive`, `sourcePattern`, `contextTags`, `availabilityWindows`, `visibility` (`private` | `team` | `public`), `teamId` (optional).
+    - `taxonomyIds` (denormalisiert, vom Pattern oder user-spezifisch abgeleitet).
+    - Optional `intendedOutcome`, `metricHint`.
+4.  **`state_syncs`**  
+    - `microScript`: Relation zu `micro_scripts`.
+    - `timestamp`: DateTime.
+    - `status`: (`flow`, `friction`, `skipped`).
+    - `flowRating` (1–5), `effortRating` (optional), `moodDelta` (optional).
+    - `frictionTags`: Array aus leichter Friction-Taxonomie.
+    - `frictionNote`, `aiAdjustment` (Text/JSON).
 
-### B. Community Collections
+### B. Community Collections & Taxonomien
 
-5.  **`pattern_library`** (Public Repository):
-    - Gleiche Struktur wie `micro_scripts`, aber ohne `owner`.
-    - `category`: Tags (z.B. "Resilienz", "Funding", "Leadership").
-    - `clones`: Number (Counter).
-    - `contributor`: Name/Pseudonym des Erstellers.
+5.  **`pattern_library`**  
+    - Felder: `title`, `trigger`, `action`, `rewardHint`, `identity`, `category`, `levels` (L1–L5), `clones`, `contributorName`, `featured` (optional), `complexity` (S/M/L), `prerequisites`, `intendedOutcome`, `metricHint`, `visibility` (`public` | `team` | `private`), `teamId` (optional).
+    - Denormalisiert: `taxonomyIds`, `taxonomySlugs`, `identitySlug`, `featuredTaxonomyIds`.
+6.  **`taxonomy_groups`**  
+    - Filter-Kategorien: z. B. Kontext, Dauer, Energie, Identität, Modus, Zielgruppe, Ergebnis.
+    - Felder: `name`, `slug`, `order`, `description`, `externalId` (für Import).
+7.  **`taxonomies`**  
+    - Filter-Werte, Relation zu `taxonomy_groups`.
+    - Felder: `name`, `order`, `description`, `externalId`, `isFeatured`.
+8.  **`pattern_taxonomies`** (Join)  
+    - n:m zwischen `pattern_library` und `taxonomies`.
+    - Optional denormalisiert als `taxonomyIds` direkt am Pattern.
+9.  **`saved_patterns`** (User↔Pattern)  
+    - Felder: `userId`, `patternId`, `pinned`, `rating`, `usageCount`, `lastUsedAt`.
+10. **`micro_script_overrides`** (User-spezifische Level/Context)  
+    - Felder: `microScriptId`, `userId`, `levelOverrides` (JSON für L1–L5), `contextTags` (userbezogen).
 
 ---
 
@@ -98,6 +104,7 @@ Da wir im Social Impact Camp arbeiten, sind die Phasen so geschnitten, dass man 
   - Turborepo init.
   - Payload Config schreiben (Collections `users`, `micro_scripts`).
   - Docker Compose für Postgres aufsetzen.
+  - TaxonomyGroups/Taxonomies Collections anlegen (Facetten für Pattern-Browsing).
   - _Resultat:_ Ein funktionierendes Admin-Panel.
 
 ### Phase 2: Web-Interface (Dashboard & Planung)
@@ -122,12 +129,13 @@ Da wir im Social Impact Camp arbeiten, sind die Phasen so geschnitten, dass man 
 
 ### Phase 4: Der KI-Layer & Pattern Library
 
-- **Ziel:** Intelligenz und Community.
+- **Ziel:** Intelligenz und Community mit facettiertem Pattern-Browsing.
 - **Tasks:**
   - Integration Vercel AI SDK.
-  - Bau des "Weekly Review" Agents (Zusammenfassung der State Syncs).
-  - Öffentlicher Bereich für die Pattern Library.
-  - "Clone to my Scripts" Funktion.
+  - Bau des "Weekly Review" Agents (Zusammenfassung der State Syncs, Friction-Tags nutzen).
+  - Öffentlicher Bereich für die Pattern Library mit Facetten-Filter (TaxonomyGroups/Taxonomies, OR/AND).
+  - "Clone to my Scripts" (Pattern → MicroScript, Taxonomien denormalisieren).
+  - Saved Patterns (Pin/Rating), Featured/Editorial Notes für Kuration.
 
 ---
 

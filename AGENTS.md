@@ -20,7 +20,7 @@ Since the user is likely not a Git expert, **YOU MUST handle version control man
 ### Modes
 - **Concept Mode (default):** General/product-facing work. Always branch off `concept` and target PRs to `concept`.
 - **Dev Mode:** Deep technical work for techies. Branch off `dev` and target PRs to `dev` (keeps user-facing and hardcore dev streams separated).
-- **Branch protection:** `concept` and `dev` are protected; always go via PR, no force pushes.
+- **Branch protection:** aktuell keine Protection auf `concept`/`dev`; trotzdem immer via PR, kein Force-Push.
 
 ### Rule #1: NEVER work directly on the `main` branch.
 
@@ -115,6 +115,7 @@ You must use these terms in the code (variable names) and in the UI. We do not u
 3.  **Language:** User-facing chat/explanations in German. Code, comments, and identifiers stay in English. Do not mix languages in the same context.
 4.  **Tone:** Be direct, action-oriented, and motivating. Make conversations fun and energizing for the user.
 5.  **Security (BYOK):** When writing code for AI integration, ensure API Keys are **NEVER** hardcoded (`.env` usage) and are kept in the Frontend only temporarily in Secure Storage/LocalStorage (Privacy First).
+6.  **FAQ-Pflege:** Wenn der User Fragen stellt und wir sie gut beantworten können, schreibe die Erkenntnis sofort zusätzlich in `docs/PressReleaseFAQ.md` (anhängen, keine bestehenden Antworten löschen).
 
 ---
 
