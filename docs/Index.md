@@ -11,6 +11,8 @@ _Warum bauen wir das überhaupt?_
 
 - **[Pitch](Pitch.md)**  
   Der "Elevator Pitch" und die strategische Einordnung. Hier erfährst du, was SelfState ist, warum es ein "Leuchtturm-Projekt" ist und welche Philosophie dahintersteckt.
+- **[Zielgruppe](Zielgruppe.md)**  
+  Für wen ist SelfState? Definition der "Pilot-User" (Changemaker, Social Innovators) und ihrer Psychografie.
 - **[Problemraum](Problemraum.md)**  
   Eine tiefgehende Analyse der "Impact-Blockade". Warum scheitern Changemaker nicht an Ideen, sondern an der Operationalisierung ihrer Energie? 
 - **[Lösungsraum](Lösungsraum.md)**  
@@ -25,8 +27,6 @@ _Die Bausteine der Anwendung._
   Weg von To-do-Listen, hin zu Rollen. Beschreibung der 6 Kern-Identitäten (SELF/CREATE/CONNECT) und wie sie im Produkt gelebt werden.
 - **[Patterns (Micro-Scripts)](Patterns.md)**  
   Die konkrete Bibliothek der Verhaltensmuster. Hier findest du detaillierte Beschreibungen zu Patterns wie "Morning Self Check" oder "One-Line Next Step".
-- **[Zielgruppe](Zielgruppe.md)**  
-  Für wen ist SelfState? Definition der "Pilot-User" (Changemaker, Social Innovators) und ihrer Psychografie.
 
 ## 3. Produkt & Technik
 _Wie setzen wir es um?_
