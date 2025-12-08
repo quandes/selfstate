@@ -17,7 +17,7 @@ SelfState ist mehr als eine App – es ist ein **Leuchtturm-Projekt aus dem Soci
 
 **SelfState** ist eine Open-Source-Plattform zur Persönlichkeits- und Wirkungsentwicklung. Sie adressiert das Kernproblem vieler Changemaker und Gründer: Der Wille zur Veränderung ist da, aber die Umsetzung scheitert oft an Erschöpfung, fehlender Struktur oder dem Versuch, alles über reine Willenskraft zu erzwingen.
 
-SelfState ersetzt Disziplin durch **Identität** und **Flow**. Wir übersetzen große Visionen in **Mikro-Skripte** (winzige Verhaltensänderungen), die im Alltag ohne Widerstand funktionieren. Unterstützt durch einen **KI-basierten "State Sync"** (Meta-Prozess) und die Schwarmintelligenz der SIC-Community, hilft SelfState Menschen dabei, in drei Dimensionen zu wachsen: **Ich (Resilienz)**, **Schaffen (Impact)** und **Verbinden (Community)**.
+SelfState reduziert den Bedarf an Disziplin durch **Identität** und **Flow**. Wir übersetzen große Visionen in **Mikro-Skripte** (winzige Verhaltensänderungen), die im Alltag ohne Widerstand funktionieren. Unterstützt durch einen **KI-basierten "State Sync"** (Meta-Prozess) und die Schwarmintelligenz der SIC-Community, hilft SelfState Menschen dabei, in drei Dimensionen zu wachsen: **Ich (Resilienz)**, **Schaffen (Impact)** und **Verbinden (Community)**.
 
 Das Projekt wird unter der Schirmherrschaft von Quandes Projects e. V. entwickelt, ist "Privacy-First" und Open Source.
 
