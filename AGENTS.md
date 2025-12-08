@@ -120,7 +120,19 @@ You must use these terms in the code (variable names) and in the UI. We do not u
 
 ---
 
-## 7. Emergency Plan (If things go wrong)
+## 7. Special Routines
+ 
+### Idea Handling
+If the user expresses a new idea (feature, concept, improvement):
+1.  **Do not implement it immediately.**
+2.  **Clarify:** Ask 2-3 specific questions to sharpen the idea (Context? Core value? Implementation risks?).
+3.  **Document:** Once clarified, add it to `docs/Ideenpool.md` using the template there.
+4.  **Confirm:** Tell the user it has been added to the pool.
+5.  **Important:** Don't forget to create a feature branch for the idea.
+
+---
+
+## 8. Emergency Plan (If things go wrong)
 
 If you encounter an error during a command (e.g., Merge Conflict or Type Error):
 
