@@ -1,5 +1,7 @@
 # Pitch: SelfState
 
+**Hinweis:** Das Social Impact Camp (SIC) ist ein kollaboratives Programm von Quandes Projects e. V., das Menschen und Teams unterstützt, gesellschaftliche Wirkung zu erzielen. 'Change Makers' bzw. 'Social Innovators' bezeichnen die teilnehmenden Praktiker*innen. (Mehr Infos: `docs/SocialImpactCamp.md`.)
+
 **Projekt-Status:** Inkubiert im Social Impact Camp (SIC) von Quandes Projects e. V.
 **Claim:** Das Betriebssystem für Identität, Flow und Wirkung.
 
