@@ -5,6 +5,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "echo \"build shared types\""
+    "build": "echo \"build shared types\"",
+    "test": "vitest"
+  }
+  ,
+  "devDependencies": {
+    "zod": "^3.21.4",
+    "vitest": "^0.34.3"
   }
 }
