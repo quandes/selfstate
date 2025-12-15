@@ -1,0 +1,14 @@
+{
+  "name": "@apps/cms",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "payload dev",
+    "build": "payload build",
+    "start": "payload start",
+    "generate:types": "echo \"Run pnpm generate:types in repo root after Payload setup\""
+  },
+  "dependencies": {
+    "payload": "^2.0.0"
+  }
+}
