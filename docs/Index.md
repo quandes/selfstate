@@ -27,6 +27,8 @@ _Die Bausteine der Anwendung._
   Weg von To-do-Listen, hin zu Rollen. Beschreibung der 6 Kern-Identitäten (SELF/CREATE/CONNECT) und wie sie im Produkt gelebt werden.
 - **[Patterns (Micro-Scripts)](Patterns.md)**  
   Die konkrete Bibliothek der Verhaltensmuster. Hier findest du detaillierte Beschreibungen zu Patterns wie "Morning Self Check" oder "One-Line Next Step".
+- **[Patterns-Übersicht](PatternsÜbersicht.md)**  
+  Schnelle Übersichtstabelle aller 11 Patterns mit Säulen, Komplexität und empfohlenen Starter-Kombinationen.
 
 ## 3. Produkt & Technik
 _Wie setzen wir es um?_
