@@ -1,11 +1,48 @@
 import React from 'react';
+import Button from '../../../packages/ui/src/Button';
+import { colors } from '../../../packages/ui/src/tokens';
+
+const MOCK_MICROSCRIPTS = [
+  { id: 'ms1', title: '2 Minuten Atemübung', note: 'Kurze Pause, 4–4–4 Atmung' },
+  { id: 'ms2', title: 'Kurze Dehnung', note: 'Schulterkreisen & Nackenlockern' },
+  { id: 'ms3', title: 'Fokus-Check', note: 'Was ist die wichtigste Aufgabe jetzt?' },
+];
 
 export default function Page() {
   return (
-    <div className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">SelfState — Web (Platzhalter)</h1>
-      <p className="mb-4">Dies ist ein Dev‑Scaffold für das Web‑Dashboard. Inhalte werden noch implementiert.</p>
-      <a className="text-primary underline" href="/docs/Umsetzungsplan.md">Zum Umsetzungsplan</a>
+    <div className="p-8 max-w-4xl mx-auto">
+      <header className="flex items-start justify-between mb-8">
+        <div>
+          <h1 className="text-4xl font-extrabold mb-2">SelfState</h1>
+          <p className="text-slate-600">Identity-first Micro‑Scripts & State Sync — Dev Preview</p>
+        </div>
+        <div className="space-x-3">
+          <Button onClick={() => alert('State Sync starten (Platzhalter)')}>State Sync</Button>
+          <Button variant="ghost" onClick={() => alert('Neues Micro‑Script (Platzhalter)')}>Neu</Button>
+        </div>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {MOCK_MICROSCRIPTS.map((m) => (
+          <article key={m.id} className="p-4 border rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-1">{m.title}</h3>
+            <p className="text-sm text-slate-600 mb-3">{m.note}</p>
+            <div className="flex items-center justify-between">
+              <div className="text-xs text-slate-500">Identity: SELF</div>
+              <Button variant="primary" onClick={() => alert(`Start ${m.title}`)}>
+                Start
+              </Button>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <footer className="mt-8 text-sm text-slate-500">
+        <p>
+          Entwickler‑Hinweis: Farben und Komponenten stammen aus `packages/ui`. Primärfarbe:
+          <span className="ml-2 font-mono" style={{ color: colors.primary }}>{colors.primary}</span>
+        </p>
+      </footer>
     </div>
   );
 }
