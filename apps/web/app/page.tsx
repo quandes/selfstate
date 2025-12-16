@@ -8,6 +8,8 @@ import { fetchMicroScripts, MicroScript } from '../lib/api';
 export default function Page() {
   const [items, setItems] = useState<MicroScript[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showSync, setShowSync] = useState(false);
+  const [syncEntries, setSyncEntries] = useState<Array<any>>([]);
 
   useEffect(() => {
     let mounted = true;
@@ -29,7 +31,7 @@ export default function Page() {
           <p className="text-slate-600">Identity-first Micro‑Scripts & State Sync — Dev Preview</p>
         </div>
         <div className="space-x-3">
-          <Button onClick={() => alert('State Sync starten (Platzhalter)')}>State Sync</Button>
+          <Button onClick={() => setShowSync(true)}>State Sync</Button>
           <Button variant="ghost" onClick={() => alert('Neues Micro‑Script (Platzhalter)')}>Neu</Button>
         </div>
       </header>
@@ -42,9 +44,12 @@ export default function Page() {
             <p className="text-sm text-slate-600 mb-3">{m.note}</p>
             <div className="flex items-center justify-between">
               <div className="text-xs text-slate-500">Identity: {m.identity ?? 'SELF'}</div>
-              <Button variant="primary" onClick={() => alert(`Start ${m.title}`)}>
-                Start
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button variant="primary" onClick={() => { setShowSync(true); }}>
+                  Start
+                </Button>
+                <Button variant="ghost" onClick={() => { navigator.clipboard?.writeText(m.title); alert('Kopiert'); }}>Teilen</Button>
+              </div>
             </div>
           </article>
         ))}
@@ -56,6 +61,28 @@ export default function Page() {
           <span className="ml-2 font-mono" style={{ color: colors.primary }}>{colors.primary}</span>
         </p>
       </footer>
+      {showSync && (
+        // lazy import to keep bundle small
+        (() => {
+          const StateSyncModal = require('../components/StateSyncModal').default;
+          return (
+            <StateSyncModal
+              onClose={() => setShowSync(false)}
+              onCreate={(entry: any) => setSyncEntries((s) => [entry, ...s])}
+            />
+          );
+        })()
+      )}
+      {syncEntries.length > 0 && (
+        <div className="mt-6">
+          <h4 className="font-semibold mb-2">Letzte State Syncs</h4>
+          <ul className="space-y-2 text-sm">
+            {syncEntries.map((e, i) => (
+              <li key={e.id || i} className="p-2 border rounded">{new Date(e.date).toLocaleString()} — Rating: {e.rating} — {e.notes}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
