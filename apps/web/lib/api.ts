@@ -29,6 +29,37 @@ export async function fetchMicroScripts(): Promise<MicroScript[]> {
     return MOCK_MICROSCRIPTS;
   }
 }
+
+export async function postMicroScript(payload: Partial<MicroScript>): Promise<MicroScript> {
+  const API = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_API_URL as string | undefined) : process.env.NEXT_PUBLIC_API_URL;
+  const newItem: MicroScript = {
+    id: payload.id ?? `ms-${Date.now()}`,
+    title: payload.title ?? 'Untitled',
+    note: payload.note,
+    identity: payload.identity ?? 'SELF',
+  };
+
+  if (!API) {
+    // No API configured: return created item locally
+    return new Promise((res) => setTimeout(() => res(newItem), 200));
+  }
+
+  try {
+    const url = API.replace(/\/$/, '') + '/api/micro-scripts';
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newItem),
+    });
+    if (!res.ok) throw new Error(`Failed ${res.status}`);
+    const json = await res.json();
+    // assume payload returns created doc
+    return json;
+  } catch (e) {
+    // On error, return local item (optimistic)
+    return newItem;
+  }
+}
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 async function request(path: string, init?: RequestInit) {
